@@ -81,13 +81,6 @@ footer {
     margin: 15px 0;
     font-weight: bold; }
 
-#carouselExampleIndicators {
-  margin-top: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.2); }
-
-#carouselExampleIndicators > * {
-  max-height: 80vh; }
-
 .destacados article .card {
   border: 1px solid rgba(0, 0, 0, 0.2); }
 
