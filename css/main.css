@@ -1,16 +1,10 @@
-/*------Estilos globales--------------*/
+/*Variables*/
+/*-----Estilos globales--------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
-
-.grilla {
-  display: grid;
-  width: 100vw;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto;
-  grid-template-areas: "main" "footer"; }
 
 /*header*/
 header {
@@ -45,7 +39,7 @@ header {
 
 /********** Main (todas menos home) ***************/
 main {
-  grid-area: main; }
+  margin-bottom: 30px; }
   main h1 {
     padding: 15px 0; }
 
@@ -53,25 +47,27 @@ main {
 footer {
   display: flex;
   align-items: center;
-  /*width: 100%;*/
-  /*background-color: #362c29;*/
-  background: linear-gradient(90deg, #efd2d2 0%, #362c29 100%); }
+  justify-content: space-evenly;
+  border: 1px solid; }
   footer .redes {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    padding: 20px 0; }
     footer .redes img {
+      padding: 0 10px;
       height: 50px; }
   footer .logoFooter {
     height: 120px;
     object-fit: contain; }
   footer nav {
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none; }
     footer nav a {
       font-size: 20px;
-      color: #fff;
+      font-weight: bold;
       text-decoration: none; }
 
 /***********Home**************/
@@ -81,18 +77,13 @@ footer {
     margin: 15px 0;
     font-weight: bold; }
 
-.destacados article .card {
-  border: 1px solid rgba(0, 0, 0, 0.2); }
+#carouselExampleCaptions {
+  margin: 20px 0; }
 
-.destacados article h3 {
-  padding: 10px 0;
-  text-align: center;
-  background-color: #EFD2D2; }
-
-.destacados article img {
-  object-fit: cover;
-  width: 100%;
-  height: 200px; }
+#carouselExampleCaptions > * {
+  max-height: 80vh; }
+  #carouselExampleCaptions > * img {
+    object-fit: scale-down; }
 
 /* Efecto de las cards de cursos */
 .shadow-drop-center:hover {
@@ -126,23 +117,23 @@ footer {
     font-size: 2em; }
   .sectionBlog article .contenido, .sectionCursos article .contenido {
     display: flex; }
-    .sectionBlog article .contenido .col1, .sectionBlog article .contenido .col2, .sectionCursos article .contenido .col1, .sectionCursos article .contenido .col2 {
+    .sectionBlog article .contenido .col1, .sectionCursos article .contenido .col1, .sectionBlog article .contenido .col2, .sectionCursos article .contenido .col2 {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center; }
-      .sectionBlog article .contenido .col1 img, .sectionBlog article .contenido .col2 img, .sectionCursos article .contenido .col1 img, .sectionCursos article .contenido .col2 img {
+      .sectionBlog article .contenido .col1 img, .sectionCursos article .contenido .col1 img, .sectionBlog article .contenido .col2 img, .sectionCursos article .contenido .col2 img {
         height: 400px;
         max-width: 500px;
         object-fit: cover;
         border-radius: 10px; }
-      .sectionBlog article .contenido .col1 p, .sectionBlog article .contenido .col2 p, .sectionCursos article .contenido .col1 p, .sectionCursos article .contenido .col2 p {
+      .sectionBlog article .contenido .col1 p, .sectionCursos article .contenido .col1 p, .sectionBlog article .contenido .col2 p, .sectionCursos article .contenido .col2 p {
         display: block;
         margin-bottom: 10px;
         font-size: 1.2em;
         line-height: 1.5; }
-      .sectionBlog article .contenido .col1 button, .sectionBlog article .contenido .col2 button, .sectionCursos article .contenido .col1 button, .sectionCursos article .contenido .col2 button {
+      .sectionBlog article .contenido .col1 button, .sectionCursos article .contenido .col1 button, .sectionBlog article .contenido .col2 button, .sectionCursos article .contenido .col2 button {
         width: 50%;
         font-size: 1.5em;
         font-weight: bold;
@@ -154,8 +145,7 @@ footer {
   flex-direction: column;
   justify-content: space-evenly; }
   .sectionFAQ article {
-    margin-bottom: 20px;
-    margin-left: 10px; }
+    margin-bottom: 20px; }
   .sectionFAQ h2 {
     color: #362c29; }
   .sectionFAQ p {
@@ -196,5 +186,5 @@ footer {
 @media (max-width: 600px) {
   #facebookHeader, #whatsappHeader, #instagramHeader, .redesSociales {
     display: none; }
-  .carrusel {
-    display: none; } }
+  footer {
+    flex-direction: column; } }

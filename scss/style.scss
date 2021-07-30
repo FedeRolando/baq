@@ -1,19 +1,13 @@
+/*Variables*/
+$mainColor1: #efd2d2;
+$mainColor2: #362c29;
+
 /*-----Estilos globales--------------*/
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Lato', sans-serif;
-}
-
-.grilla {
-	display: grid;
-	width: 100vw;
-	grid-template-rows: auto auto;
-	grid-template-columns: auto;
-	grid-template-areas:
-	"main"
-	"footer";
 }
 
 /*header*/
@@ -27,7 +21,7 @@ header {
 	align-items: center;
 	min-height: 12vh;
 	z-index: 1000;
-	background-color: #efd2d2;
+	background-color: $mainColor1;
 	border: 1px solid;
 	.redesSociales {
 		height: 40px;
@@ -56,7 +50,7 @@ header {
 
 /********** Main (todas menos home) ***************/
 main {
-	grid-area: main;
+	margin-bottom: 30px;
 	h1 {
 		padding: 15px 0;
 	}
@@ -66,13 +60,14 @@ main {
 footer {
 	display: flex;
 	align-items: center;
-	/*width: 100%;*/
-	/*background-color: #362c29;*/
-	background: linear-gradient(90deg, rgba(239,210,210,1) 0%, rgba(54,44,41,1) 100%);
+	justify-content: space-evenly;
+	border: 1px solid;
 	.redes {
 		display: flex;
 		justify-content: space-evenly;
+		padding: 20px 0;
 		img {
+			padding: 0 10px;
 			height: 50px;
 		}
 	}
@@ -81,18 +76,18 @@ footer {
 	object-fit: contain;
 	}
 	nav {
+		padding: 20px 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		list-style: none;
 		a {
 			font-size: 20px;
-			color: #fff;
+			font-weight: bold;
 			text-decoration: none;
 		}		
 	}
 }
-
 
 /***********Home**************/
 .mainHome {
@@ -103,32 +98,17 @@ footer {
 	}
 }
 
-#carouselExampleIndicators {
-	margin-top: 12px;
-	border: 1px solid rgba(0,0,0,.2);
-}
-#carouselExampleIndicators > * {
-	max-height: 60vh;
+#carouselExampleCaptions {
+	margin: 20px 0;
 }
 
-.destacados {
-	article {
-		.card {
-			border: 1px solid rgba(0,0,0,.2);
-		}	 
-		h3 {
-			padding: 10px 0;
-			text-align: center;
-			background-color: #EFD2D2;
-		}
-		img {
-			object-fit: cover;
-			width: 100%;
-			height: 200px;
-
-		}
+#carouselExampleCaptions > * {
+	max-height: 80vh;
+	img {
+		object-fit: scale-down;
 	}
 }
+
 
 /* Efecto de las cards de cursos */
 .shadow-drop-center:hover {
@@ -160,7 +140,7 @@ footer {
 
 /******** Blog y Cursos **********/
 
-.sectionBlog, .sectionCursos{
+.sectionBlog {
 	article{
 		height: 81vh;
 		display: flex;
@@ -202,6 +182,10 @@ footer {
 	}
 }
 
+.sectionCursos {
+	@extend .sectionBlog;
+}
+
 
 /*------FAQ---------------*/
 .sectionFAQ {
@@ -209,7 +193,6 @@ footer {
 	justify-content: space-evenly;
 	article{
 		margin-bottom: 20px;
-		margin-left: 10px;
 	}
 	h2 {
 		color: #362c29;
@@ -266,8 +249,8 @@ footer {
   #facebookHeader,#whatsappHeader,#instagramHeader,.redesSociales {
     display: none;
   }
-  .carrusel {
-  	display: none;
+  footer {
+  	flex-direction: column;
   }
 }
 
