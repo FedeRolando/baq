@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +14,14 @@
 </head>
 <body>
 
-    <header class="container-xxl">
-
-        <!-- Iconos redes sociales -->
-        <div class="redesSociales">
-            <!-- Facebook -->
-            <img id="facebookHeader" src="img/iconos-redes-sociales/facebook.png" alt="Icono facebook">
-            <!-- Instagram -->
-            <img id="instagramHeader" src="img/iconos-redes-sociales/instagram.png" alt="Icono instagram">
-            <!-- Whatsapp -->
-            <img id="whatsappHeader"src="img/iconos-redes-sociales/whatsapp.png" alt="Icono whatsapp">
-        </div>
-
+    <header class="container-xl">
         <!-- Logo -->
-        <img class="logoHeader" src="img/logo-baq.png" alt="Logo BAQ">
-
-        <!-- Menú -->
+        <div class="divLogo">
+            <a href="index.html">
+                <img class="logoHeader" src="img/logo.jpg" alt="Logo BAQ">
+            </a>
+        </div>
+        <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cursos.html">Cursos</a>
@@ -46,7 +38,7 @@
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="faq.html" class="nav-link">FAQ</a>
+                        <a class="nav-link" href="faq.html">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="contacto.html">Contacto</a>
@@ -54,80 +46,76 @@
                 </ul>
             </div>
         </nav>
-
     </header>
         
-            <main class="container-xl">
-            <h1 class="row">Contacto</h1>
+    <main class="container-xl" id="mainContacto">
+        <h1 class="mainTitle">Contacto</h1>
 
-            <form class="row formulario" action="process.php" method="POST" enctype="text/plain">
-                <div class="formulario__datos col-12 col-md-6">
-                    <h2>Datos personales</h2>
-                    
-                    <div>
-                        <label for="nombre">Nombre:</label>
-                        <input name="nombre" type="text" placeholder="Tu nombre" required autofocus>
-                    </div>
-                    
-                    <div>
-                        <label for="mail">Mail:</label>
-                        <input name="mail" type="email" placeholder="Correo electrónico" required>
-                    </div>
-                    
-                    <div>
-                        <label for="genero">Género:</label>
-                        <input type="radio" name="genero" value="Masculino">
-                        <span>Masculino</span>
-                        <input type="radio" name="genero" value="Femenino">
-                        <span>Femenino</span>
-                        <input type="radio" name="genero" value="Otro">
-                        <span>Otro</span>
-                    </div>
-
-                    <div>
-                        <label for="curso">Curso:</label>
-                        <select name="curso">
-                            <option value="otro">Otro</option>
-                            <option value="Curso1">Curso #1</option>
-                            <option value="Curso2">Curso #2</option>
-                            <option value="Curso3">Curso #3</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="suscribirse" value="1" checked>
-                        <span>Quiero recibir información sobre nuevos cursos</span>   
-                    </div>
+        <form class="row gy-2" id="formContacto">
+            <div class="col-12 col-md-6">
+            <div class="form_datos">
+                <h2>Datos personales</h2>                  
+                <div class="inputForm">
+                    <label for="nombre">Nombre:</label>
+                    <input name="nombre" type="text" placeholder="Tu nombre" required autofocus>
                 </div>
                     
-                <div class="formulario__consulta col-12 col-md-6">
-                    <h2>Tu consulta:</h2>
-                    <textarea name="mensaje" cols="50" rows="10"></textarea>
-                    <input class="formulario__consulta__boton" type="submit" value="Enviar consulta">
-                    <input class="formulario__consulta__boton" type="reset" value="Limpiar formulario">
-                </div> 
-            </form>
+                <div class="inputForm">
+                    <label for="mail">Mail:</label>
+                    <input name="mail" type="email" placeholder="Tu mail" required>
+                </div>
+                    
+                <div>
+                    <label for="genero">Género:</label>
+                    <div>
+                    <input type="radio" name="genero" value="Masculino">
+                    <span>Masculino</span>
+                    </div>
+                    <div>
+                    <input type="radio" name="genero" value="Femenino">
+                    <span>Femenino</span>
+                    </div>
+                    <div>
+                    <input type="radio" name="genero" value="Otro">
+                    <span>Otro</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="curso">Curso:</label>
+                    <select name="curso">
+                        <option value="otro">Otro</option>
+                        <option value="Curso1">Curso #1</option>
+                        <option value="Curso2">Curso #2</option>
+                        <option value="Curso3">Curso #3</option>
+                    </select>
+                </div>
+                    
+                <div>
+                    <input type="checkbox" name="suscribirse" value="1" checked>
+                    <span>Quiero recibir información sobre nuevos cursos</span>   
+                </div>
+            </div>
+            </div>
+                    
+            <div class="form_consulta col-12 col-md-6">
+                <h2>Tu consulta:</h2>
+                <textarea name="mensaje" cols="50" rows="10"></textarea>
+                <input class="form_btn" type="submit" value="Enviar consulta">
+                <input class="form_btn" type="reset" value="Limpiar formulario">
+            </div> 
+        </form>
     </main>    
 
-    <footer class="container-xxl">
-        <!-- Redes sociales -->
-        <div class="redes">
-            <img src="img/iconos-redes-sociales/facebook.png" alt="Icono facebook">
-            <img src="img/iconos-redes-sociales/instagram.png" alt="Icono instagram">
-            <img src="img/iconos-redes-sociales/whatsapp.png" alt="Icono whatsapp">
+    <footer class="container-xl">
+        <div class="instagram">
+            <a href="https://www.instagram.com/baqbotanics/?hl=es-la" target="_blank">
+                <img class="img-fluid" src="img/iconos-redes-sociales/seguinos.png" alt="instagram">
+            </a>
         </div>
-        <!-- Logo footer -->  
-        <img src="img/logo-baq.png" alt="Logo BAQ" class="logoFooter">
-        <!-- Menú footer -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="blog.html">Blog</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
     </footer>
 
-<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>     
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/rotate-logo.js"></script>      
 </body>
 </html>

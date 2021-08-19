@@ -1,91 +1,82 @@
-/*Variables*/
-/*-----Estilos globales--------------*/
+/**** Vars *****/
+/****** Global styles *******/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
 
-/*header*/
+body {
+  background-color: #fff; }
+
+/***** overwrite bootstrap layout *****/
+.container-xl {
+  padding: 0; }
+
+.row {
+  margin: 0; }
+
+/********* Header **********/
 header {
   position: sticky;
   top: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 12vh;
-  z-index: 1000;
-  background-color: #efd2d2;
-  border: 1px solid; }
-  header .redesSociales {
-    height: 40px; }
-    header .redesSociales img {
-      height: 100%;
-      padding: 5px; }
+  min-height: 100px;
+  background-color: #fff;
+  border: 2px solid; }
   header .logoHeader {
-    height: 70px;
-    padding: 0 10px; }
+    max-height: 60px;
+    margin-left: 5px;
+    padding-bottom: 5px; }
 
-/***** sobre-escritura nav Bootstrap****/
+/** toggle class to rotate logo **/
+.rotate {
+  transform: rotate(-90deg);
+  margin-left: -20px; }
+
+/** overwrite bootstrap nav **/
 .navbar-toggler {
+  margin-right: 10px;
   background-color: #f8f9fa;
   border: 1px solid;
-  margin-right: 10px;
   border-color: #000 !important; }
 
 .nav-link {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1.4rem; }
 
-/********** Main (todas menos home) ***************/
-main {
-  margin-bottom: 30px; }
-  main h1 {
-    padding: 15px 0; }
+/********** Main (all pages) ***************/
+.mainTitle, #mainHome h2 {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #6E4E77;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff; }
 
-/***********Footer*********************/
+#mainCursos, #mainBlog, #mainFaq, #mainContacto, #mainHome {
+  padding: 0 0 20px 0; }
+
+#mainHome #sectionCursosHome {
+  margin-bottom: 20px; }
+
+/*********** Footer *********************/
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  border: 1px solid; }
-  footer .redes {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0; }
-    footer .redes img {
-      padding: 0 10px;
-      height: 50px; }
-  footer .logoFooter {
-    height: 120px;
-    object-fit: contain; }
-  footer nav {
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none; }
-    footer nav a {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none; }
-
-/***********Home**************/
-.mainHome {
-  margin-bottom: 30px; }
-  .mainHome h2 {
-    margin: 15px 0;
-    font-weight: bold; }
-
-#carouselExampleCaptions {
-  margin: 20px 0; }
-
-#carouselExampleCaptions > * {
-  max-height: 80vh; }
-  #carouselExampleCaptions > * img {
+  justify-content: center;
+  border: 2px solid;
+  background-color: #fff; }
+  footer .instagram img {
+    max-height: 80px;
+    padding: 10px 0;
     object-fit: scale-down; }
 
-/* Efecto de las cards de cursos */
+/**** images hover effect *******/
 .shadow-drop-center:hover {
   -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
@@ -106,85 +97,64 @@ footer {
     -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35); } }
 
-/******** Blog y Cursos **********/
-.sectionBlog article, .sectionCursos article {
-  height: 81vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; }
-  .sectionBlog article h2, .sectionCursos article h2 {
-    font-size: 2em; }
-  .sectionBlog article .contenido, .sectionCursos article .contenido {
-    display: flex; }
-    .sectionBlog article .contenido .col1, .sectionCursos article .contenido .col1, .sectionBlog article .contenido .col2, .sectionCursos article .contenido .col2 {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center; }
-      .sectionBlog article .contenido .col1 img, .sectionCursos article .contenido .col1 img, .sectionBlog article .contenido .col2 img, .sectionCursos article .contenido .col2 img {
-        height: 400px;
-        max-width: 500px;
-        object-fit: cover;
-        border-radius: 10px; }
-      .sectionBlog article .contenido .col1 p, .sectionCursos article .contenido .col1 p, .sectionBlog article .contenido .col2 p, .sectionCursos article .contenido .col2 p {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 1.2em;
-        line-height: 1.5; }
-      .sectionBlog article .contenido .col1 button, .sectionCursos article .contenido .col1 button, .sectionBlog article .contenido .col2 button, .sectionCursos article .contenido .col2 button {
-        width: 50%;
-        font-size: 1.5em;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 5px; }
-
-/*------FAQ---------------*/
+/********* FAQ **********/
 .sectionFAQ {
   flex-direction: column;
   justify-content: space-evenly; }
   .sectionFAQ article {
-    margin-bottom: 20px; }
+    margin-top: 10px; }
   .sectionFAQ h2 {
+    margin: 0;
     color: #362c29; }
   .sectionFAQ p {
+    margin: 0;
     padding: 5px; }
 
-/*Contacto*/
-.formulario {
-  margin-bottom: 30px; }
+/************ Contacto ************/
+#formContacto {
+  margin-top: 10px; }
+  #formContacto .form_datos {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px dashed #362c29;
+    font-weight: bold; }
+    #formContacto .form_datos .inputForm input {
+      max-width: 100%; }
+  #formContacto .form_consulta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    #formContacto .form_consulta .form_btn {
+      margin-top: 5px;
+      padding: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #efd2d2;
+      color: #362c29; }
+    #formContacto .form_consulta .form_btn:hover {
+      background-color: #6E4E77;
+      color: #efd2d2; }
 
-.formulario__datos {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 20px;
-  border: 2px dashed #362c29;
-  font-weight: bold; }
+/**** Responsive for super-small screens *****/
+@media (max-width: 300px) {
+  .logoHeader {
+    height: 50px; } }
 
-.formulario__consulta {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; }
+@media (max-width: 270px) {
+  .logoHeader {
+    height: 40px; } }
 
-.formulario__consulta__boton {
-  padding: 8px;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 5px;
-  background-color: #efd2d2;
-  color: #362c29; }
-
-.formulario__consulta__boton:hover {
-  background-color: #362c29;
-  color: #efd2d2; }
-
-/***************** MEDIA QUERIES **************************************/
-@media (max-width: 600px) {
-  #facebookHeader, #whatsappHeader, #instagramHeader, .redesSociales {
+@media (max-width: 230px) {
+  .divLogo {
     display: none; }
-  footer {
-    flex-direction: column; } }
+  header {
+    justify-content: center; } }
+
+@media (max-width: 220px) {
+  .mainTitle, #mainHome h2 {
+    font-size: 1.2rem; } }
